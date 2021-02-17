@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e3eeff"
+    android:orientation="vertical"
+    tools:context=".MainActivity3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/tlicon"
+            android:layout_width="56dp"
+            android:layout_height="23dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/dolaricon"
+            android:layout_width="56dp"
+            android:layout_height="23dp"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignTop="@+id/dolarText"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tlText"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="61dp"
+            android:gravity="right"
+            android:text="1000 ₺"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="129dp"
+            android:layout_height="43dp"
+            android:layout_above="@+id/bakiyeGuncelle"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Cüzdan"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dolarText"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tlText"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="46dp"
+            android:layout_marginTop="2000dp"
+            android:gravity="right"
+            android:text="50 $"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/euroText"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tlText"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:gravity="right"
+            android:text="60 €"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/bakiyeGuncelle"
+            android:layout_width="157dp"
+            android:layout_height="62dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Cüzdanındaki Bakiyeyi Değiştir"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/kurGuncelle"
+            android:layout_width="157dp"
+            android:layout_height="62dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="Kur Güncelle"
+            android:textSize="11sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/cikisButton"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:longClickable="false"
+            android:text="ÇIKIŞ              YAP"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="17sp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/holo_green_dark" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/holo_green_dark" />
+
+        <ImageView
+            android:id="@+id/euroicon"
+            android:layout_width="56dp"
+            android:layout_height="23dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/euroText"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="206dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">  <!-- editText için AutoFocus kapatmak -->
+
+        <RadioGroup
+            android:id="@+id/bgrup"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/dolarrb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="USD" />
+
+            <RadioButton
+                android:id="@+id/eurorb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EUR" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="228dp"
+            android:layout_height="57dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/bozdurButton"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/satinAlButton"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/satinAlButton"
+            android:text="BOZDUR"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/satinAlButton"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="20dp"
+            android:text="SATIN AL"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="132dp">
+
+        <ImageView
+            android:id="@+id/euroiconX"
+            android:layout_width="56dp"
+            android:layout_height="23dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/dolariconX"
+            android:layout_marginBottom="23dp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/dolariconX"
+            android:layout_width="56dp"
+            android:layout_height="23dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="23dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textInfoD"
+            android:layout_width="226dp"
+            android:layout_height="65dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/euroiconX"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textInfoE"
+            android:layout_width="226dp"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textInfoD"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonKaydet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#b9dd70"
+        android:text="DEĞİŞİKLİKLERİ KAYDET" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/basaDon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:background="#53adcc"
+            android:text="Döviz Çevirici" />
+    </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

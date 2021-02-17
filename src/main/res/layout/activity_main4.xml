@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity4"
+    android:background="#e3eeff">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="191dp"
+        android:layout_height="65dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Kıyaslayacağınız Miktar"
+        android:inputType="none|number"
+        android:text="0"
+        android:textColorLink="@android:color/holo_green_dark"
+        android:textStyle="bold|italic" />
+
+    <RadioGroup
+        android:id="@+id/bgrup"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/tlrb"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+
+            android:text="TL" />
+
+        <RadioButton
+            android:id="@+id/dolarrb"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+
+            android:text="USD" />
+
+        <RadioButton
+            android:id="@+id/eurorb"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+
+            android:text="EUR" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="ÇEVİR"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/tlicon"
+        android:layout_width="56dp"
+        android:layout_height="40dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="119dp"
+        android:duplicateParentState="true"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/dolaricon"
+        android:layout_width="56dp"
+        android:layout_height="40dp"
+
+        android:layout_alignStart="@+id/tlicon"
+        android:layout_below="@+id/tlicon"
+        android:duplicateParentState="true"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/euroicon"
+        android:layout_width="56dp"
+        android:layout_height="40dp"
+
+        android:layout_alignStart="@+id/tlicon"
+        android:layout_below="@+id/dolarT"
+        android:duplicateParentState="true"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tlT"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="false"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/tlicon"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dolarT"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tlT"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/tlicon"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/euroT"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/dolarT"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/tlicon"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/geriButton"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="89dp"
+        android:background="#53adcc"
+        android:text="Cüzdana Dön"
+
+        android:textStyle="bold" />
+
+</RelativeLayout>
